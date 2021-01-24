@@ -57,7 +57,7 @@ export const PersonForm = () => {
       />
       <div className="button-bar">
         <Button btnClickHandler={createPersonHandler}>Create New Person</Button>
-        <Button btnClickHandler={() => { history.push('/') }} style={"normal"}>Return</Button>
+        <Button btnClickHandler={() => { history.push('/') }} type="normal">Return</Button>
       </div>
 
     </form >

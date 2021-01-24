@@ -128,7 +128,8 @@ export const MemoDetails = (props) => {
         ) : null
       }
       <div style={{ marginTop: '1em' }}>
-        <Button btnClickHandler={() => { history.go(-1) }} style={"normal"}>Return</Button>
+        <Button btnClickHandler={() => { history.push(`/memo/update-memo/${id}`) }}>Update Memo</Button>
+        <Button btnClickHandler={() => { history.go(-1) }} type="normal">Return</Button>
       </div>
     </>
   );

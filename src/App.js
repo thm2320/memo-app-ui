@@ -13,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/memo/details/:id" render={() => <MemoDetails />} />
           <Route path="/memo/create-memo" render={() => <MemoForm />} />
+          <Route path="/memo/update-memo/:id" render={() => <MemoForm />} />
           <Route path="/memos/:personId?/:displayName" render={() => <MemoList />} />
           <Route path="/person/:id?" render={() => <PersonForm />} />
           <Route exact path="/" render={() => <PersonList />} />

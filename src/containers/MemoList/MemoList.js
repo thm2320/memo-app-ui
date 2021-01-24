@@ -42,7 +42,7 @@ export const MemoList = (props) => {
       <h1>Memo List - {displayName}</h1>
       <div className="button-bar">
         <Button btnClickHandler={openMemoForm}>Create Memo</Button>
-        <Button btnClickHandler={() => { history.push('/') }} style="normal">Back to Person List</Button>
+        <Button btnClickHandler={() => { history.push('/') }} type="normal">Back to Person List</Button>
       </div>
       {
         memos && memos.length > 0 ? (
