@@ -8,8 +8,13 @@
   padding: 1em;
   width: auto;
   cursor: pointer;
+  margin-right: 0.5em;
 
   &:hover {
     opacity: 0.6;
+  }
+
+  &.normal {
+    background-color: #adadad;
   }
 }

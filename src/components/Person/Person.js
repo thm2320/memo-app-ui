@@ -11,7 +11,7 @@ const Person = (props) => {
   }
 
   return (
-    <div className="Person" onClick={showMemos}>
+    <div className="Person" onClick={props.clickHandler ? props.clickHandler : showMemos}>
       {props.displayName}
     </div>
   );

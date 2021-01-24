@@ -42,6 +42,7 @@ export const MemoList = (props) => {
       <h1>Memo List</h1>
       <div className="button-bar">
         <Button btnClickHandler={openMemoForm}>Create Memo</Button>
+        <Button btnClickHandler={() => { history.push('/') }} style="normal">Back to Person List</Button>
       </div>
       <p>Click on the Memo to check details:</p>
       {

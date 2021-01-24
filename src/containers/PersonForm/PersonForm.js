@@ -12,7 +12,7 @@ export const PersonForm = () => {
 
   const history = useHistory();
 
-  const btnClickHandler = async (evt) => {
+  const createPersonHandler = async (evt) => {
     evt.preventDefault();
     const { displayName } = fields;
 
@@ -55,9 +55,12 @@ export const PersonForm = () => {
         value={fields.displayName}
         onChange={onInputChange}
       />
-      <Button btnClickHandler={btnClickHandler}>Create New Person</Button>
+      <div className="button-bar">
+        <Button btnClickHandler={createPersonHandler}>Create New Person</Button>
+        <Button btnClickHandler={() => { history.push('/') }} style={"normal"}>Return</Button>
+      </div>
 
-    </form>
+    </form >
   );
 }
 
