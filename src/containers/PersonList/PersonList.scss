@@ -1,0 +1,19 @@
+.PersonList {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin-left: 1em;
+    align-self: flex-start;
+  }
+
+  .button-bar {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+
+    .Button {
+      margin-left: 1em;
+    }
+  }
+}
