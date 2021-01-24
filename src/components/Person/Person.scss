@@ -1,0 +1,16 @@
+.Person {
+  border: 1px solid;
+  border-radius: 10px;
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 3px 3px 3px gray;
+  font-size: 2em;
+  font-weight: bold;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
