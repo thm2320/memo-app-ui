@@ -79,6 +79,25 @@ export const MemoDetails = (props) => {
     }
   }
 
+  const unlinkPerson = async (personId, memoId) => {
+    const res = await axios.post('/graphql', {
+      query: `
+      mutation{
+        unlinkPerson(unlinkPersonInput:{
+          personId:"${personId}"
+          memoId:"${memoId}"
+        })
+        {
+          linkId
+        }
+      }
+      `
+    })
+    if (res) {
+      history.go(0)
+    }
+  }
+
   return (
     <>
       <div className="MemoDetails">
@@ -96,6 +115,8 @@ export const MemoDetails = (props) => {
                         key={p.id}
                         displayName={p.displayName}
                         id={p.id}
+                        clickHandler={() => { unlinkPerson(p.id, id) }}
+                        showRemoveButton
                       />
                     })
                   }

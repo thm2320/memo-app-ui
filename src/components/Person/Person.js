@@ -10,9 +10,18 @@ const Person = (props) => {
     history.push(`/memos/${props.id}/${props.displayName}`)
   }
 
+  const getClickFn = () => {
+    return props.clickHandler ? props.clickHandler : showMemos
+  }
+
   return (
-    <div className="Person" onClick={props.clickHandler ? props.clickHandler : showMemos}>
-      {props.displayName}
+    <div
+      className={`Person ${props.showRemoveButton ? 'removeable' : ''}`}
+      onClick={props.showRemoveButton ? null : getClickFn()}>
+      <p>{props.displayName}</p>
+      {props.showRemoveButton ? (
+        <button onClick={props.showRemoveButton ? getClickFn() : null}>&times;</button>
+      ) : null}
     </div>
   );
 }

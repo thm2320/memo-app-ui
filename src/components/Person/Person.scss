@@ -8,10 +8,36 @@
   font-size: 2em;
   font-weight: bold;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    border: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     opacity: 0.6;
+  }
+
+  &.removeable {
+    &:hover {
+      opacity: 1;
+
+      button {
+        opacity: 0.6;
+      }
+    }
+
+  }
+
+  &:not(.removeable) {
     cursor: pointer;
   }
 }
