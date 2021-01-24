@@ -41,9 +41,16 @@ const PersonList = (props) => {
       <div className="button-bar">
         <Button btnClickHandler={openPersonForm}>Create Person</Button>
       </div>
+      <p>Click on the Person to check his/her memos:</p>
       {
         persons.map(p => {
-          return <Person key={p.id} displayName={p.displayName} />
+          return (
+            <Person
+              key={p.id}
+              displayName={p.displayName}
+              id={p.id}
+            />
+          )
         })
       }
     </div>
