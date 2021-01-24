@@ -26,7 +26,7 @@ const PersonList = (props) => {
       `
     })
       .then((res) => {
-        setPersons(res.data.data.person)
+        setPersons(res.data.data.person.sort((a, b) => { return a.displayName <= b.displayName ? -1 : 1 }))
       })
 
   }, [])

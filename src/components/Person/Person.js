@@ -7,7 +7,7 @@ const Person = (props) => {
   const history = useHistory();
 
   const showMemos = () => {
-    history.push(`/memos/${props.id}`)
+    history.push(`/memos/${props.id}/${props.displayName}`)
   }
 
   return (

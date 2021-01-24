@@ -1,6 +1,6 @@
 .Memo {
   width: auto;
-  margin: 0.2em 1em 0;
+  margin: 0.2em;
   padding: 1em;
   box-shadow: 3px 3px 3px gray;
   display: flex;
@@ -8,8 +8,8 @@
   justify-content: space-between;
 
   &.new {
-    border-left: 5px solid blue;
-    background-color: #c1f0f0;
+    border-left: 5px solid orange;
+    background-color: #f7f7b2;
   }
 
   &.completed {
@@ -19,6 +19,7 @@
 
   &:hover {
     opacity: 0.6;
+    cursor: pointer;
   }
 
   .TaskContent {

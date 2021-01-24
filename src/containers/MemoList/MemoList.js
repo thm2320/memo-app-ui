@@ -8,7 +8,7 @@ import { Button } from '../../components/UI/Button/Button';
 
 export const MemoList = (props) => {
   const [memos, setMemos] = useState([])
-  const { personId } = useParams()
+  const { personId, displayName } = useParams()
 
   const history = useHistory();
 
@@ -39,16 +39,22 @@ export const MemoList = (props) => {
 
   return (
     <div className="MemoList">
-      <h1>Memo List</h1>
+      <h1>Memo List - {displayName}</h1>
       <div className="button-bar">
         <Button btnClickHandler={openMemoForm}>Create Memo</Button>
         <Button btnClickHandler={() => { history.push('/') }} style="normal">Back to Person List</Button>
       </div>
-      <p>Click on the Memo to check details:</p>
       {
-        memos.map(m => {
-          return <Memo key={m.id} {...m} />
-        })
+        memos && memos.length > 0 ? (
+          <>
+            <p>Click on the Memo to check details:</p>
+            {
+              memos.map(m => {
+                return <Memo key={m.id} {...m} />
+              })
+            }
+          </>
+        ) : <p>No memos for person "{displayName}"</p>
       }
     </div>
   );

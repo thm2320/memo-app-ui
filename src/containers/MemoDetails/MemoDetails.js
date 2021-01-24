@@ -83,11 +83,11 @@ export const MemoDetails = (props) => {
     <>
       <div className="MemoDetails">
         {memo ? (
-          <div>
+          <>
             <h1>{memo.title}</h1>
             <p>{memo.content}</p>
-            { memo.persons && memo.persons.length > 0 ? (
-              <>
+            {memo.persons && memo.persons.length > 0 ? (
+              <div className="memo-bottom">
                 <h2>Linked Persons:</h2>
                 <div className="linked-persons">
                   {
@@ -100,9 +100,9 @@ export const MemoDetails = (props) => {
                     })
                   }
                 </div>
-              </>
+              </div>
             ) : null}
-          </div>
+          </>
         ) : null}
 
       </div>
@@ -127,7 +127,7 @@ export const MemoDetails = (props) => {
           </div>
         ) : null
       }
-      <div className="button-bar">
+      <div style={{ marginTop: '1em' }}>
         <Button btnClickHandler={() => { history.go(-1) }} style={"normal"}>Return</Button>
       </div>
     </>
