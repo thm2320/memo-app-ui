@@ -34,7 +34,7 @@ export const MemoList = (props) => {
   }, [personId])
 
   const openMemoForm = () => {
-    history.push('/memo')
+    history.push(`/memo/create-memo?owner=${personId}`)
   }
 
   return (
