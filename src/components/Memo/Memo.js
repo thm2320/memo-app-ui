@@ -7,7 +7,7 @@ export const Memo = (props) => {
   const history = useHistory();
 
   const showMemoDetails = () => {
-    history.push(`/memo/${props.id}`)
+    history.push(`/memo/details/${props.id}`)
   }
 
   return (
